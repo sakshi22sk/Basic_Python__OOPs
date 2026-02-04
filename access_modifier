@@ -1,0 +1,115 @@
+# ENCAPSULATION OOP PRACTICE QUESTIONS
+
+# 1. Create a Student class where marks are private and accessed using getter method.
+class Student:
+    def __init__(self,marks):
+        self.__marks=marks
+    def get_marks(self):
+        return self.__marks
+c=Student(90)
+print(c.get_marks())
+
+# 2. Create a BankAccount class with private balance and methods to deposit and check balance.
+class Bankaccount:
+    def __init__(self,balance):
+        self.__balance=balance
+    def deposit(self,o):
+        self.__balance=self.__balance+o
+    def get_balance(self):
+        print("The balance is:",self.__balance)
+B=Bankaccount(90000000)
+B.deposit(7890)
+B.get_balance()
+# 3. Create a Person class where age is private and cannot be negative.
+class person:
+    def __init__(self,age):
+        self.__age=age
+    def print_age(self):
+        if self.__age<0:
+            print("Age cannot be neg")
+        else:
+            print("The age is",self.__age)
+p=person(-5)
+p.print_age()
+# 4. Create a User class that hides password and verifies it using a method.
+class user:
+    def __init__(self,password):
+        self.__password=password
+    def verify_password(self,attempt):
+        if self.__password==attempt:
+            print("success")
+        else:
+            print("Not right pass")
+u=user("sakshi22")
+u.verify_password("sakshi22")
+
+# 5. Create an Employee class where salary is private and can be increased.
+class Employee:
+    def __init__(self,salary):
+        self.__salary=salary
+    def inc_sal(self):
+        self.__salary=self.__salary+5000
+    def show_sal(self):
+        print("The salary is",self.__salary)
+e=Employee(50000000)
+e.inc_sal()
+e.show_sal()
+# 6. Create a Car class with private speed and methods accelerate and brake.
+class car:
+    def __init__(self,speed):
+        self.__speed=speed
+    def accerlerate(self):
+        self.__speed=self.__speed+20
+    def brake(self):
+        self.__speed=self.__speed-10
+    def show_speed(self):
+        print("The speed is",self.__speed)
+c=car(100)
+c.accerlerate()
+c.brake()
+c.show_speed()
+# 7. Create a Mobile class where battery percentage is private and decreases when used.
+class Mobile:
+    def __init__(self,battery):
+        self.__battery=battery
+    def use(self,amount):
+        self.__battery=self.__battery-amount
+    def show_battery(self):
+        print("The battery is",self.__battery)
+        print("The speed is",self.__battery)
+c=Mobile(100)
+c.use(20)
+c.show_battery()
+# 8. Create an ATM class with hidden PIN and verification method.
+class ATM:
+    def __init__(self,PIN):
+        self.__PIN=PIN
+    def show_verify(self,o):
+        if(self.__PIN==o):
+            print("The PIN is",self.__PIN)
+        else:
+            print("no")
+c=ATM(100)
+c.show_verify(100)
+# 9. Create a Book class where price is private and cannot be negative.
+class book:
+    def __init__(self,price):
+        self.__price=price
+    def show_price(self):
+        if(self.__price)>0:
+            print("The price is",self.__price)
+        else:
+            print("no")
+c=book(100)
+c.show_price()
+# 10. Create a Result class where marks list is private and modified using methods.
+class result:
+    def __init__(self,marks):
+        self.__marks=marks
+    def add_mark(self,mark):
+        self.__marks.append(mark)
+    def show_marks(self):
+        print("The marks are",self.__marks)
+m=result([90,80,70])
+m.add_mark(85)  
+m.show_marks()
